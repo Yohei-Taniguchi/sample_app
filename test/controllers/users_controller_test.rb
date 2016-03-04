@@ -64,6 +64,6 @@ class UsersControllerTest < ActionController::TestCase
     patch :update, id: @other_user, user: { password:              "",
                                             password_confirmation: "",
                                             admin: false }
-    assert_not @other_user.FILL_IN.admin?
+    assert_not @other_user.admin?
   end
 end
